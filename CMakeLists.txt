@@ -8,7 +8,7 @@ project(shortcuts
 # CPM configuration
 #-----------------------------------------------------------------------
   set(CPM_MODULE_NAME shortcuts)
-  # set(CPM_LIB_TARGET_NAME ${CPM_MODULE_NAME})
+  set(CPM_LIB_TARGET_NAME ${CPM_MODULE_NAME})
   
   # if ((DEFINED CPM_DIR) AND (DEFINED CPM_UNIQUE_ID) AND (DEFINED CPM_TARGET_NAME))
   #   set(CPM_LIB_TARGET_NAME ${CPM_TARGET_NAME})
