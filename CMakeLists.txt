@@ -37,5 +37,8 @@ project(shortcuts
   # CPM_InitModule(${CPM_MODULE_NAME})
 
   # The lib itself
-  add_library(${MODULE_NAME} STATIC ptrs.h sptr.h str.h uptr.h vec.h)
+  add_library(${MODULE_NAME} INTERFACE ptrs.h sptr.h str.h uptr.h vec.h)
+  target_include_directories(${MODULE_NAME} INTERFACE ${PROJECT_SOURCE_DIR})
+  # set_target_properties(${MODULE_NAME} PROPERTIES LINKER_LANGUAGE CXX)
+  # target_include_directories(${MODULE_NAME} )
   # target_link_libraries(${CPM_LIB_TARGET_NAME} ${CPM_LIBRARIES})
