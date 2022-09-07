@@ -7,8 +7,7 @@ project(shortcuts
 #-----------------------------------------------------------------------
 # CPM configuration
 #-----------------------------------------------------------------------
-  set(CPM_MODULE_NAME shortcuts)
-  set(CPM_LIB_TARGET_NAME ${CPM_MODULE_NAME})
+  set(MODULE_NAME shortcuts)
   
   # if ((DEFINED CPM_DIR) AND (DEFINED CPM_UNIQUE_ID) AND (DEFINED CPM_TARGET_NAME))
   #   set(CPM_LIB_TARGET_NAME ${CPM_TARGET_NAME})
@@ -38,5 +37,5 @@ project(shortcuts
   # CPM_InitModule(${CPM_MODULE_NAME})
 
   # The lib itself
-  add_library(${CPM_LIB_TARGET_NAME} STATIC ptrs.h sptr.h str.h uptr.h vec.h)
-  target_link_libraries(${CPM_LIB_TARGET_NAME} ${CPM_LIBRARIES})
+  add_library(${MODULE_NAME} STATIC ptrs.h sptr.h str.h uptr.h vec.h)
+  # target_link_libraries(${CPM_LIB_TARGET_NAME} ${CPM_LIBRARIES})
