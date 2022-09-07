@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.18)
 
-project(shortcuts VERSION 1.0.0)
+project(shortcuts 
+  VERSION 1.0.0
+  LANGUAGES CXX)
 
 #-----------------------------------------------------------------------
 # CPM configuration
