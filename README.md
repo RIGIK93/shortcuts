@@ -1,6 +1,10 @@
 # shortcuts.cmake
 Various C++ std shortcuts. This will make your life better and your code readers' lives worse, but don't worry, no one reads your code anyway! You can add this via CPM.cmake and shoot in your foot once more, because this thing does not use any namespaces! Why, you may ask. The reason is that this repo will be remade to be used with c++20 modules, but there is a catch: C++20 IS NOT YET SUPPORTED!
 
+## Why did I make this?
+Now it is suitable for testing and learning. When you learn or test certain language concepts and things, you want to as less code as possible. This is why this library was created.
+
+I don't recommend using it in headers for now, especially when creating libraries, since it'll make the life of the developers that will build on top of your code annoying. But the [C++20 modules](https://en.cppreference.com/w/cpp/language/modules) fix this problem via isolation, so you don't have to worry about anything if you're using this as a module. I'll make the module support for this project, when C++20 is out in my compiler.
 # Add via CPM.cmake
 ```cmake
 include(cmake/CPM.cmake)
