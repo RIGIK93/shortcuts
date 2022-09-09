@@ -11,3 +11,80 @@ CPMAddPackage("gh:RIGIK93/shortcuts.cmake#main")
 # Link to the created library shortcuts
 target_link_libraries(myapp PRIVATE shortcuts)
 ```
+
+# Examples
+## Printing
+I've wrapped `std::cout` around the print function
+```c++
+#include "print.h"
+#include <string>
+#include <vector>
+
+int main() {
+    print("Hello world!"); // outputs: Hello world!
+    print("Hello", "world!"); // outputs: Hello world!
+    std::vector<std::string> a {
+        "Hello",
+        "world!"
+    }
+    print(a); // outputs: [Hello, world!]
+
+    return 0;
+}
+```
+## Vectors
+The vector is shorter now!
+```c++
+#include "vec.h"
+
+int main() {
+    vec<Object> foo; // same as: std::vector<Object> foo;
+
+    return 0;
+}
+```
+
+## Strings
+The string is shorter now!
+```c++
+#include "str.h"
+
+int main() {
+    str something("something"); // same as: std::string something("something");
+    str cool = "cool"; // same as: std::string cool = "cool";
+
+    return 0;
+}
+```
+## Smart Pointers
+Shared Pointer:
+```c++
+#include "sptr.h"
+
+int main() {
+    sptr<Object> smart_pointer(new Object()); // same as: std::shared_ptr<Object> smart_pointer(new Object());
+
+    return 0;
+}
+```
+Unique Pointer:
+```c++
+#include "uptr.h"
+
+int main() {
+    uptr<Object> smart_pointer(new Object()); // same as: std::unique_ptr<Object> smart_pointer(new Object());
+
+    return 0;
+}
+```
+And if you want to use both, I created a shortcut just for you!
+```c++
+#include "ptrs.h"
+
+int main() {
+    sptr<Object> smart_pointer(new Object()); // same as: std::shared_ptr<Object> smart_pointer(new Object());
+    uptr<Object> smart_pointer(new Object()); // same as: std::unique_ptr<Object> smart_pointer(new Object());   
+
+    return 0;
+}
+```
